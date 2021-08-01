@@ -13,7 +13,7 @@ public class SyncTask {
     @Autowired
     private SyncService syncService;
 
-    @Scheduled(cron = "0 0 9 * * ? ")
+    @Scheduled(cron = "0 0 6 * * ? ")
     public void sync() {
         String dt = LocalDate.now().minusDays(1).format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         syncService.sync(dt);

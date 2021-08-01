@@ -26,7 +26,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * pi-kafka-consumer-01   /opt/
  *
- * curl 127.0.0.1:33445/sync?dt=20210501
+ * curl 127.0.0.1:33445/sync?dt=20210703
  */
 @EnableKafka
 @EnableAsync
@@ -38,7 +38,9 @@ public class DcacheFlowApplication {
     public RestTemplate restTemplate() {
         BasicCredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY,
-                new UsernamePasswordCredentials("painetwork", "PPIOpaigod2021painet"));
+//                new UsernamePasswordCredentials("painetwork", "PPIOpaigod2021painet"));
+//                new UsernamePasswordCredentials("painetwork", "pai2021PPIOdCACHE#%"));
+                new UsernamePasswordCredentials("painetwork", "pai20210730PPIOdCACHE#%"));
 
         CloseableHttpClient httpclient = HttpClients.custom()
                 .setDefaultCredentialsProvider(credentialsProvider)
